@@ -15,7 +15,7 @@ Instale os seguintes softwares para a execução de testes disponíveis do proje
 Utilize o git [git](https://git-scm.com/) para clonar o repositório do projeto.
 
 ```bash
-git clone 
+git clone git@github.com:gomesluiz/Leilao.git
 ```
 
 ## Utilização 
