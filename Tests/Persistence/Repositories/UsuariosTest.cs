@@ -10,25 +10,28 @@ namespace Tests.Persistence.Repositories
     {
         private LeilaoContext context;
         private UsuariosEmBancoDeDados usuarios;
+
+        private const int ID = 11;
+
         [SetUp]
         public void Init()
         {
-            var database = "c:\\Leilao\\Tests\\data\\test.db";
+            var database = "C:\\Users\\gomes\\Workspace\\Leilao\\Tests\\data\\test.db";
             context = new LeilaoContext(database);
             usuarios = new UsuariosEmBancoDeDados(context);
         }
         [Test]
-        public void UsuariosEmBancoDeDados_Inclui()
+        public void UsuariosEmBancoDeDados_Inclui_DeveRetornarOMesmoUsuarioIncluido()
         {
             // Arranjo
-            var esperado = new Usuario(11, "Jobs");
+            var esperado = new Usuario(ID, "Jobs");
 
             // Ação
             usuarios.Inclui(esperado);
             usuarios.Salve();
 
             // Asserção
-            var retornado = usuarios.ListaPorId(11);
+            var retornado = usuarios.ListaPorId(ID);
             Assert.AreEqual(esperado.Id, retornado.Id);
             Assert.AreEqual(esperado.Nome, retornado.Nome);
         }
@@ -36,7 +39,7 @@ namespace Tests.Persistence.Repositories
         [TearDown]
         public void Cleanup()
         {
-            usuarios.Remove(11);
+            usuarios.Remove(ID);
             usuarios.Salve();
         }
     }
