@@ -20,9 +20,17 @@ git clone git@github.com:gomesluiz/Leilao.git
 
 ## Utilização 
 
+Executar os comandos para restaurar as dependências e realizar o build do projeto.
+
+```cmd
+C:\Leilao> dotnet restore
+C:\Leilao> dotnet buid
+```
+
 ```cmd
 C:\Leilao> dotnet test
 ```
+
 Os testes escritos para projeto Leilao poderão ser abertos no [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou no [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Contributing
