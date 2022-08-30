@@ -13,7 +13,7 @@ namespace Tests.Persistence.Repositories
         [SetUp]
         public void Init()
         {
-            var database = "c:\\Users\\gomes\\Workspace\\Leilao\\Tests\\data\\test.db";
+            var database = "c:\\Leilao\\Tests\\data\\test.db";
             context = new LeilaoContext(database);
             usuarios = new UsuariosEmBancoDeDados(context);
         }
