@@ -29,7 +29,7 @@ namespace Tests.Persistence.Repositories
             // Ação
             usuarios.Inclui(esperado);
             usuarios.Salve();
-
+    
             // Asserção
             var retornado = usuarios.ListaPorId(ID);
             Assert.AreEqual(esperado.Id, retornado.Id);
