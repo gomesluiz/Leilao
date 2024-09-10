@@ -24,7 +24,7 @@ Executar os comandos para restaurar as dependências e realizar o build do proje
 
 ```cmd
 C:\Leilao> dotnet restore
-C:\Leilao> dotnet buid
+C:\Leilao> dotnet build
 ```
 
 ```cmd
